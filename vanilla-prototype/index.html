@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <span>Scheduler</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active">
+                    <span class="icon">📅</span> Dashboard
+                </a></li>
+                <li><a href="#" class="nav-link">
+                    <span class="icon">📝</span> My Tasks
+                </a></li>
+                <li><a href="#" class="nav-link">
+                    <span class="icon">⚙️</span> Settings
+                </a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="header">
+                <div class="header-title">
+                    <p>Good morning,</p>
+                    <h1>Today's Plan</h1>
+                </div>
+                <div class="profile-btn">
+                    <img src="https://ui-avatars.com/api/?name=User&background=4E89FF&color=fff" alt="Profile">
+                </div>
+            </header>
+
+            <!-- Calendar Section -->
+            <section class="calendar-strip" id="calendarStrip">
+                <!-- Injected via JS -->
+            </section>
+
+            <!-- Task List -->
+            <section>
+                <h2 class="section-title">Timeline</h2>
+                <div class="tasks-grid" id="taskList">
+                    <!-- Tasks injected via JS -->
+                </div>
+            </section>
+
+            <!-- FAB -->
+            <button class="fab" id="fabAdd" title="Add Task">+</button>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>New Task</h2>
+                <button class="btn-cancel" style="padding: 0.5rem;" id="btnClose">✕</button>
+            </div>
+            <form id="addTaskForm">
+                <div class="input-group">
+                    <label class="input-label">Title</label>
+                    <input type="text" class="input-control" placeholder="What's on your mind?" required>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Category</label>
+                    <select class="input-control">
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="health">Health</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Time</label>
+                    <input type="time" class="input-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-cancel" id="btnCancel">Cancel</button>
+                    <button type="submit" class="btn btn-submit">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
