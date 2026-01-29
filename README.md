@@ -1,17 +1,87 @@
-# React + Vite
+# Personal Scheduler App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimalist personal scheduler and task management application designed to help you organize your day effectively. Built with React and Firebase.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **📊 Dashboard Overview**: Get a quick glimpse of your daily progress and upcoming tasks.
+- **📅 Interactive Planner**: visually manage your sessions and tasks.
+- **🔐 Secure Authentication**: User sign-up and login powered by Firebase Auth.
+- **💾 Real-time Persistence**: Your data is stored securely and syncs across devices using Firebase Firestore.
+- **🌓 Modern UI**: A clean, distraction-free interface with a focus on usability.
+- **⚡️ Fast Performance**: Powered by Vite for lightning-fast development and production builds.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: [React](https://react.dev/) (v19)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (Custom Design System)
+- **Routing**: [React Router](https://reactrouter.com/) (v7)
+- **Backend/Auth**: [Firebase](https://firebase.google.com/) (Authentication & Firestore)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Date Handling**: [date-fns](https://date-fns.org/)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# sheduler_personal
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/jitendra1282/sheduler_personal.git
+   cd scheduler
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env` file in the root directory and add your Firebase configuration:
+   ```env
+   VITE_FIREBASE_API_KEY=your_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   ```
+
+4. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+```
+scheduler/
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── context/         # React Context (Auth, etc.)
+│   ├── hooks/           # Custom React Hooks
+│   ├── pages/           # Application Pages (Dashboard, Planner, Login)
+│   ├── firebase.js      # Firebase configuration
+│   ├── main.jsx         # Application entry point
+│   └── App.jsx          # Root component and Routing
+├── vanilla-prototype/   # Initial HTML/CSS prototype
+├── public/              # Static assets
+└── package.json         # Project dependencies
+```
+
+## Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
